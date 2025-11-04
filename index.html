@@ -1,0 +1,130 @@
+<div class="c">
+  <span class="piller"></span>
+  <div class="x"></div>
+  <div class="x"></div>
+  <div class="x"></div>
+  <div class="x"></div>
+  <div class="x"></div>
+  <div class="x"></div>
+  <div class="x"></div>
+  <div class="x"></div>
+  <div class="x"></div>
+  <div class="round"></div>
+</div>
+
+<style>
+  * {
+    margin: 0;
+  }
+
+  body {
+    display: flex;
+  }
+  .c {
+    width: 100vw;
+    height: 100vh;
+    background: #202939;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+  .piller {
+    height: 50vh;
+    width: 10px;
+    background-color: rgb(11, 68, 11);
+    position: absolute;
+    bottom: 0;
+  }
+  .round {
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    border: 5px solid rgba(46, 173, 21, 0.459);
+    z-index: 2;
+  }
+  .round::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin-top: -5px;
+    margin-left: -5px;
+  }
+  .x {
+    height: 80px;
+    width: 80px;
+    border-radius: 100px 0 100px 0;
+    background-color: green;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 50%;
+    animation: round 5s linear infinite;
+  }
+
+  .x:nth-of-type(1) {
+    background-color: limegreen;
+    transform-origin: left;
+    transform: rotate(90deg);
+  }
+  .x:nth-of-type(2) {
+    background-color: limegreen;
+    transform-origin: left;
+    transform: rotate(45deg);
+  }
+  .x:nth-of-type(3) {
+    background-color: limegreen;
+    transform-origin: left;
+    transform: rotate(90deg);
+  }
+  .x:nth-of-type(4) {
+    background-color: limegreen;
+    transform-origin: left;
+    transform: rotate(135deg);
+  }
+  .x:nth-of-type(5) {
+    background-color: limegreen;
+    transform-origin: left;
+    transform: rotate(180deg);
+  }
+  .x:nth-of-type(6) {
+    background-color: limegreen;
+    transform-origin: left;
+    transform: rotate(225deg);
+  }
+  .x:nth-of-type(7) {
+    background-color: limegreen;
+    transform-origin: left;
+    transform: rotate(270deg);
+  }
+  .x:nth-of-type(8) {
+    background-color: limegreen;
+    transform-origin: left;
+    transform: rotate(315deg);
+  }
+  .x:nth-of-type(9) {
+    background-color: limegreen;
+    transform-origin: left;
+    transform: rotate(360deg);
+  }
+
+  @keyframes round {
+    0% {
+      rotate: 0deg;
+    }
+
+    50% {
+      rotate: 90deg;
+    }
+
+    100% {
+      rotate: 360deg;
+    }
+  }
+</style>
